@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ONEWAY Keys — Professional key duplication, automotive keys, lockout services, and lock installation in the Rio Grande Valley. Call (956) 685-0273." />
+  <meta name="keywords" content="key duplication, locksmith, automotive keys, lockout service, ONEWAY Keys, Rio Grande Valley" />
+  <meta property="og:title" content="ONEWAY Keys — Professional Key & Locksmith Services" />
+  <meta property="og:description" content="Fast, reliable key duplication, automotive keys, lockout services, and more. Call us at (956) 685-0273." />
+  <meta property="og:type" content="website" />
+  <title>ONEWAY Keys | Professional Key & Locksmith Services</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔑</text></svg>" />
+  <style>
+    /* ===== CSS RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a2e;
+      background: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8c96b;
+      --gold-dark: #a07830;
+      --navy: #0f1c35;
+      --navy-light: #1a2d50;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-400: #9ca3af;
+      --gray-600: #4b5563;
+      --gray-800: #1f2937;
+      --white: #ffffff;
+      --radius: 10px;
+      --radius-lg: 16px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-md: 0 8px 30px rgba(0,0,0,0.12);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.16);
+      --transition: 0.3s ease;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+    h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
+    p { color: var(--gray-600); line-height: 1.75; }
+
+    /* ===== LAYOUT UTILITIES ===== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .section-title { color: var(--navy); margin-bottom: 1rem; }
+    .section-subtitle { color: var(--gray-600); font-size: 1.05rem; max-width: 560px; }
+    .text-center { text-align: center; }
+    .text-center .section-subtitle { margin: 0 auto; }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      border: none;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201,168,76,0.4);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.7);
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--gold);
+      border: 2px solid var(--gold);
+    }
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--navy);
+      transform: translateY(-2px);
+    }
+    .btn-lg { padding: 1rem 2.4rem; font-size: 1.05rem; }
+
+    /* ===== HEADER / NAV ===== */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      transition: all var(--transition);
+    }
+    .header.scrolled {
+      background: var(--navy);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .nav-logo-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .nav-logo-text { display: flex; flex-direction: column; line-height: 1; }
+    .nav-logo-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+    .nav-logo-tagline {
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color var(--transition);
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { margin-left: 1rem; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all var(--transition);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu {
+      display: none;
+      background: var(--navy);
+      padding: 1.5rem;
+      position: fixed;
+      top: 74px; left: 0; right: 0;
+      z-index: 999;
+      flex-direction: column;
+      gap: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      font-weight: 500;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      transition: color var(--transition);
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-menu .btn { margin-top: 0.5rem; justify-content: center; }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(15,28,53,0.92) 0%,
+        rgba(15,28,53,0.75) 50%,
+        rgba(15,28,53,0.5) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 8rem 1.5rem 5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(201,168,76,0.2);
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-badge::before { content: '🔑'; }
+    .hero-title {
+      color: var(--white);
+      margin-bottom: 1.25rem;
+      max-width: 720px;
+    }
+    .hero-title span { color: var(--gold); }
+    .hero-subtitle {
+      color: rgba(255,255,255,0.8);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 540px;
+      margin-bottom: 2.5rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+    }
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+    }
+    .hero-stat { }
+    .hero-stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 0.2rem;
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      z-index: 1;
+      animation: bounce 2s infinite;
+    }
+    .hero-scroll svg { width: 18px; height: 18px; }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ===== TRUST BAR ===== */
+    .trust-bar {
+      background: var(--navy);
+      padding: 1.25rem 0;
+    }
+    .trust-bar-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .trust-item-icon {
+      color: var(--gold);
+      font-size: 1.1rem;
+    }
+
+    /* ===== SERVICES ===== */
+    .services { background: var(--gray-50); }
+    .services-header { margin-bottom: 3.5rem; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+    .service-card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .service-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .service-card-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(201,168,76,0.12);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .service-card h3 { color: var(--navy); margin-bottom: 0.6rem; }
+    .service-card p { font-size: 0.92rem; flex: 1; }
+
+    /* ===== WHY CHOOSE US ===== */
+    .why { background: var(--white); }
+    .why-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .why-img-wrap {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .why-img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      display: block;
+    }
+    .why-img-badge {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-md);
+    }
+    .why-img-badge-num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .why-img-badge-text {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 0.2rem;
+    }
+    .why-features { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
+    .why-feature {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .why-feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(201,168,76,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .why-feature-text h4 { color: var(--navy); margin-bottom: 0.2rem; font-size: 1rem; }
+    .why-feature-text p { font-size: 0.88rem; }
+
+    /* ===== PROCESS ===== */
+    .process { background: var(--navy); }
+    .process .section-title { color: var(--white); }
+    .process .section-subtitle { color: rgba(255,255,255,0.65); }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+    .process-step {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all var(--transition);
+    }
+    .process-step:hover {
+      background: rgba(201,168,76,0.1);
+      border-color: rgba(201,168,76,0.3);
+      transform: translateY(-4px);
+    }
+    .process-step-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 1.4rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+    }
+    .process-step h3 { color: var(--white); margin-bottom: 0.6rem; font-size: 1.05rem; }
+    .process-step p { color: rgba(255,255,255,0.6); font-size: 0.88rem; }
+
+    /* ===== CTA BANNER ===== */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      padding: 4rem 0;
+    }
+    .cta-banner-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .cta-banner h2 { color: var(--navy); }
+    .cta-banner p { color: rgba(15,28,53,0.75); }
+    .cta-banner-btns { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .btn-navy {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .btn-navy:hover {
+      background: var(--navy-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(15,28,53,0.35);
+    }
+    .btn-white-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+    }
+    .btn-white-outline:hover {
+      background: rgba(15,28,53,0.1);
+      transform: translateY(-2px);
+    }
+
+    /* ===== CONTACT ===== */
+    .contact { background: var(--gray-50); }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contact-info { }
+    .contact-cards { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2rem; }
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow);
+      transition: all var(--transition);
+    }
+    .contact-card:hover { transform: translateX(4px); box-shadow: var(--shadow-md); }
+    .contact-card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .contact-card-label { font-size: 0.78rem; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+    .contact-card-value { font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-top: 0.1rem; }
+    .contact-card a { color: inherit; transition: color var(--transition); }
+    .contact-card a:hover { color: var(--gold-dark); }
+
+    /* Contact form */
+    .contact-form-wrap {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-md);
+    }
+    .contact-form-wrap h3 { color: var(--navy); margin-bottom: 0.4rem; }
+    .contact-form-wrap > p { font-size: 0.9rem; margin-bottom: 1.75rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+    .form-group label { font-size: 0.85rem; font-weight: 600; color: var(--gray-800); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: var(--gray-800);
+      background: var(--gray-50);
+      transition: all var(--transition);
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-submit { width: 100%; justify-content: center; margin-top: 0.5rem; }
+
+    /* ===== MAP ===== */
+    .map-section { background: var(--white); padding: 0; }
+    .map-placeholder {
+      width: 100%;
+      height: 380px;
+      background: var(--gray-100);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: var(--gray-600);
+      font-size: 1rem;
+    }
+    .map-placeholder span { font-size: 2.5rem; }
+    .map-iframe {
+      width: 100%;
+      height: 380px;
+      border: none;
+      display: block;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--navy);
+      padding: 4rem 0 0;
+      color: rgba(255,255,255,0.75);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+    }
+    .footer-brand p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.55); margin-top: 1rem; margin-bottom: 1.5rem; }
+    .footer-social { display: flex; gap: 0.75rem; }
+    .footer-social a {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9rem;
+      transition: all var(--transition);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-social a:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+    .footer-heading {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 0.65rem; }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-contact-items { display: flex; flex-direction: column; gap: 0.75rem; }
+    .footer-contact-item { display: flex; align-items: flex-start; gap: 0.7rem; }
+    .footer-contact-item .icon { font-size: 0.95rem; color: var(--gold); margin-top: 2px; flex-shrink: 0; }
+    .footer-contact-item span { font-size: 0.85rem; color: rgba(255,255,255,0.55); }
+    .footer-contact-item a { font-size: 0.85rem; color: rgba(255,255,255,0.55); transition: color var(--transition); }
+    .footer-contact-item a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 1.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .footer-bottom p { font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+    .footer-bottom-links a { font-size: 0.82rem; color: rgba(255,255,255,0.4); transition: color var(--transition); }
+    .footer-bottom-links a:hover { color: var(--gold); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .why-inner { gap: 2.5rem; }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 4rem 0; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .why-inner { grid-template-columns: 1fr; }
+      .why-img { height: 340px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .cta-banner-inner { flex-direction: column; text-align: center; }
+      .cta-banner-btns { justify-content: center; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
+      .trust-bar-inner { gap: 1rem 2rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 360px) {
+      .process-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-up { animation: fadeInUp 0.6s ease both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+    .delay-5 { animation-delay: 0.5s; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="#home" class="nav-logo">
+        <div class="nav-logo-icon">🔑</div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">ONEWAY Keys</span>
+          <span class="nav-logo-tagline">Professional Locksmith</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="tel:9566850273" class="btn btn-primary nav-cta">
+        📞 (956) 685-0273
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#why-us" class="mobile-link">About</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="tel:9566850273" class="btn btn-primary">📞 Call (956) 685-0273</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge fade-in-up">Trusted Locksmith Services</div>
+      <h1 class="hero-title fade-in-up delay-1">
+        Your Keys, <span>Your Security</span> — Done Right
+      </h1>
+      <p class="hero-subtitle fade-in-up delay-2">
+        ONEWAY Keys delivers fast, reliable, and professional key duplication, automotive key programming, and locksmith services in the Rio Grande Valley.
+      </p>
+      <div class="hero-actions fade-in-up delay-3">
+        <a href="tel:9566850273" class="btn btn-primary btn-lg">📞 Call Now</a>
+        <a href="#services" class="btn btn-secondary btn-lg">View Services</a>
+      </div>
+      <div class="hero-stats fade-in-up delay-4">
+        <div class="hero-stat">
+          <div class="hero-stat-number">100+</div>
+          <div class="hero-stat-label">Key Types Cut</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">24/7</div>
+          <div class="hero-stat-label">Emergency Support</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">Same</div>
+          <div class="hero-stat-label">Day Service</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item"><span class="trust-item-icon">✅</span> Licensed & Insured</div>
+      <div class="trust-item"><span class="trust-item-icon">⚡</span> Fast Turnaround</div>
+      <div class="trust-item"><span class="trust-item-icon">🔒</span> Secure & Reliable</div>
+      <div class="trust-item"><span class="trust-item-icon">💲</span> Competitive Pricing</div>
+      <div class="trust-item"><span class="trust-item-icon">🚗</span> Automotive Specialists</div>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="services-header text-center">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Professional Key & Locksmith Services</h2>
+        <p class="section-subtitle">
+          From simple key copies to advanced transponder programming, ONEWAY Keys has you covered with expert craftsmanship and top-tier equipment.
+        </p>
+      </div>
+      <div class="services-grid">
+
+        <!-- Service 1: Key Duplication -->
+        <div class="service-card">
+          <img
+            src="https://images.unsplash.com/photo-1582979512210-99b6a53386f9?w=800&q=80"
+            alt="Technician cutting and duplicating a house key at ONEWAY Keys"
+            class="service-card-img"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <div class="service-card-icon">🔑</div>
+            <h3>Key Duplication</h3>
+            <p>
+              Precision-cut copies of residential, commercial, and padlock keys in minutes. We carry a wide range of blanks to fit nearly any keyway.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 2: Automotive Keys -->
+        <div class="service-card">
+          <img
+            src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80"
+            alt="Automotive car key fob programming service at ONEWAY Keys"
+            class="service-card-img"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <div class="service-card-icon">🚗</div>
+            <h3>Automotive Keys & Fobs</h3>
+            <p>
+              Lost your car key or need a spare? We program transponder keys, smart keys, and key fobs for most domestic and foreign vehicle makes and models.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 3: Residential Locksmith -->
+        <div class="service-card">
+          <img
+            src="https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+            alt="Residential door lock installation and rekeying service"
+            class="service-card-img"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <div class="service-card-icon">🏠</div>
+            <h3>Residential Locksmith</h3>
+            <p>
+              Lock installation, rekeying, and repair for your home. Upgrade to high-security deadbolts and protect your family with peace of mind.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 4: Commercial Locks -->
+        <div class="service-card">
+          <img
+            src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80"
+            alt="Commercial door lock and access control installation for businesses"
+            class="service-card-img"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <div class="service-card-icon">🏢</div>
+            <h3>Commercial Lock Services</h3>
+            <p>
+              Master key systems, high-security locks, and access control solutions designed to keep your business, employees, and assets secure.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 5: Emergency Lockout -->
+        <div class="service-card">
+          <img
+            src="https://images.unsplash.com/photo-1592659762303-90081d34b277?w=800&q=80"
+            alt="Emergency lockout service — locked out of home or car"
+            class="service-card-img"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <div class="service-card-icon">🆘</div>
+            <h3>Emergency Lockout Service</h3>
+            <p>
+              Locked out of your home or car? Our rapid-response team is on call to get you back inside quickly and safely — no damage, no hassle.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 6: Lock Repair -->
+        <div class="service-card">
+          <img
+            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80"
+            alt="Lock repair and hardware maintenance service by a skilled locksmith"
+            class="service-card-img"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <div class="service-card-icon">🔧</div>
+            <h3>Lock Repair & Maintenance</h3>
+            <p>
+              Sticky, worn, or damaged locks repaired by skilled technicians. We restore proper function and extend the life of your existing hardware.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="section why" id="why-us">
+    <div class="container">
+      <div class="why-inner">
+        <div class="why-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80"
+            alt="ONEWAY Keys professional locksmith technician at work"
+            class="why-img"
+          />
+          <div class="why-img-badge">
+            <div class="why-img-badge-num">100%</div>
+            <div class="why-img-badge-text">Satisfaction Guaranteed</div>
+          </div>
+        </div>
+        <div>
+          <span class="section-label">Why Choose Us</span>
+          <h2 class="section-title">Expert Locksmiths You Can Trust</h2>
+          <p>
+            At ONEWAY Keys, we combine years of hands-on experience with the latest key-cutting and programming technology to deliver results that are fast, accurate, and affordable — every time.
+          </p>
+          <div class="why-features">
+            <div class="why-feature">
+              <div class="why-feature-icon">🛡️</div>
+              <div class="why-feature-text">
+                <h4>Licensed & Fully Insured</h4>
+                <p>We operate with full licensing and insurance so you're always protected when you work with us.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon">⚙️</div>
+              <div class="why-feature-text">
+                <h4>Advanced Equipment</h4>
+                <p>State-of-the-art key cutting machines and transponder programmers ensure a perfect result on the first try.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon">⏱️</div>
+              <div class="why-feature-text">
+                <h4>Fast Same-Day Service</h4>
+                <p>Most services are completed on the same day — no long waits, no runaround. Your time matters.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon">💰</div>
+              <div class="why-feature-text">
+                <h4>Transparent, Fair Pricing</h4>
+                <p>No hidden fees or surprise charges. We give you a clear quote upfront so you know exactly what to expect.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="section process">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">Simple, Straightforward Process</h2>
+        <p class="section-subtitle">Getting the keys or locksmith service you need is easy — just follow these steps.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-step-num">1</div>
+          <h3>Call or Visit</h3>
+          <p>Reach out by phone or stop by our location. We'll assess your needs and give you a free quote on the spot.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num">2</div>
+          <h3>Expert Consultation</h3>
+          <p>Our technicians evaluate your lock or key situation and recommend the best solution for your budget.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num">3</div>
+          <h3>Fast Execution</h3>
+          <p>We get to work immediately using professional-grade tools and genuine key blanks for flawless results.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num">4</div>
+          <h3>Quality Check</h3>
+          <p>Every key is tested before handoff. We don't consider the job done until everything works perfectly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner-inner">
+        <div>
+          <h2>Need a Key Made or Locked Out?</h2>
+          <p>Call us now and get fast, professional service you can count on.</p>
+        </div>
+        <div class="cta-banner-btns">
+          <a href="tel:9566850273" class="btn btn-navy btn-lg">📞 (956) 685-0273</a>
+          <a href="#contact" class="btn btn-white-outline btn-lg">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-info">
+          <span class="section-label">Get in Touch</span>
+          <h2 class="section-title">Contact ONEWAY Keys</h2>
+          <p>
+            Whether you need a simple key copy, automotive transponder programming, or emergency lockout assistance, our friendly team is ready to help. Reach out today!
+          </p>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-card-icon">📞</div>
+              <div>
+                <div class="contact-card-label">Phone</div>
+                <div class="contact-card-value"><a href="tel:9566850273">(956) 685-0273</a></div>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">✉️</div>
+              <div>
+                <div class="contact-card-label">Email</div>
+                <div class="contact-card-value"><a href="mailto:info@onewaykeys.com">info@onewaykeys.com</a></div>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">📍</div>
+              <div>
+                <div class="contact-card-label">Location</div>
+                <div class="contact-card-value">Rio Grande Valley, TX</div>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">🕒</div>
+              <div>
+                <div class="contact-card-label">Business Hours</div>
+                <div class="contact-card-value">Mon–Sat: 8:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <h3>Request a Free Quote</h3>
+          <p>Fill out the form and we'll get back to you within 1 business hour.</p>
+          <form id="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first_name" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(956) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed *</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service…</option>
+                <option value="key-duplication">Key Duplication</option>
+                <option value="automotive-keys">Automotive Keys & Fobs</option>
+                <option value="residential-locksmith">Residential Locksmith</option>
+                <option value="commercial-locks">Commercial Lock Services</option>
+                <option value="emergency-lockout">Emergency Lockout</option>
+                <option value="lock-repair">Lock Repair & Maintenance</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message / Details</label>
+              <textarea id="message" name="message" placeholder="Tell us more about your needs…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit btn-lg">Send My Request →</button>
+          </form>
+          <div id="form-success" style="display:none; margin-top:1rem; padding:1rem; background:#d1fae5; border-radius:8px; color:#065f46; font-weight:600; text-align:center;">
+            ✅ Thank you! We'll contact you shortly.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP ===== -->
+  <div class="map-section">
+    <div class="map-placeholder">
+      <span>📍</span>
+      <strong>Rio Grande Valley, TX</strong>
+      <p style="color:#6b7280; font-size:0.9rem;">Call us at <a href="tel:9566850273" style="color:#c9a84c; font-weight:600;">(956) 685-0273</a> to confirm our current location</p>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo" style="display:inline-flex; margin-bottom:0.25rem;">
+            <div class="nav-logo-icon" style="width:36px;height:36px;font-size:1.1rem;">🔑</div>
+            <div class="nav-logo-text" style="margin-left:0.5rem;">
+              <span class="nav-logo-name" style="font-size:1.15rem;">ONEWAY Keys</span>
+              <span class="nav-logo-tagline">Professional Locksmith</span>
+            </div>
+          </a>
+          <p>Your trusted partner for key duplication, automotive key programming, and locksmith services across the Rio Grande Valley. Fast, reliable, and affordable.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">in</a>
+            <a href="#" aria-label="Twitter/X">𝕏</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-us">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="tel:9566850273">Call Now</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links">
+            <li><a href="#services">Key Duplication</a></li>
+            <li><a href="#services">Automotive Keys</a></li>
+            <li><a href="#services">Residential Locks</a></li>
+            <li><a href="#services">Commercial Locks</a></li>
+            <li><a href="#services">Emergency Lockout</a></li>
+            <li><a href="#services">Lock Repair</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <span class="icon">📞</span>
+              <a href="tel:9566850273">(956) 685-0273</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="icon">✉️</span>
+              <a href="mailto:info@onewaykeys.com">info@onewaykeys.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="icon">📍</span>
+              <span>Rio Grande Valley, TX</span>
+            </div>
+            <div class="footer-contact-item">
+              <span class="icon">🕒</span>
+              <span>Mon–Sat: 8 AM – 6 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ONEWAY Keys. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // --- Sticky Header ---
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+    // initialise state
+    if (window.scrollY > 50) header.classList.add('scrolled');
+
+    // --- Mobile Menu ---
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('.mobile-link, .mobile-menu .btn').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
+      });
+    });
+
+    // --- Smooth Scroll for anchor links ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // --- Contact Form Handler ---
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('contact-form');
+      const success = document.getElementById('form-success');
+      form.style.display = 'none';
+      success.style.display = 'block';
+    }
+
+    // --- Intersection Observer for fade-in animations ---
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -40px 0px'
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.service-card, .why-feature, .process-step, .contact-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
